@@ -13,6 +13,7 @@ import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import { AnimatePresence } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 
 function AppContent({ theme, toggleTheme }) {
   const location = useLocation();
@@ -36,6 +37,7 @@ function AppContent({ theme, toggleTheme }) {
         </AnimatePresence>
       </main>
       <Footer />
+      <Analytics />
     </div>
   );
 }

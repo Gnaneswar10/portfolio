@@ -1,6 +1,7 @@
 import React from 'react';
 import PageTransition from '../components/PageTransition';
 import ProjectCard from '../components/ProjectCard';
+import { motion } from 'framer-motion';
 import './Projects.css';
 
 function Projects() {
@@ -39,11 +40,31 @@ function Projects() {
           Showcasing my work in data analytics, machine learning, and software development.
         </p>
 
-        <div className="projects-grid">
+        <motion.div 
+          className="projects-grid"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.15 }
+            }
+          }}
+        >
           {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
+            <motion.div 
+              key={index}
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100, damping: 12 } }
+              }}
+            >
+              <ProjectCard {...project} />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </PageTransition>
   );
