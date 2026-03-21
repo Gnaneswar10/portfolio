@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PageTransition from '../components/PageTransition';
 import Button from '../components/Button';
-import { FaEnvelope, FaLinkedin, FaGithub, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaGithub, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 import './Contact.css';
 
 function Contact() {
@@ -48,10 +48,14 @@ function Contact() {
             </p>
             
             <div className="info-items">
-              <div className="info-item">
+              <a href="mailto:gnaneswarraju10@gmail.com" className="info-item" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <FaEnvelope className="info-icon" />
                 <span>gnaneswarraju10@gmail.com</span>
-              </div>
+              </a>
+              <a href="tel:7095877212" className="info-item" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <FaPhone className="info-icon" />
+                <span>+91 7095877212</span>
+              </a>
               <div className="info-item">
                 <FaMapMarkerAlt className="info-icon" />
                 <span>Remote / Relocation</span>
