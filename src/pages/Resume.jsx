@@ -1,7 +1,7 @@
 import React from 'react';
 import PageTransition from '../components/PageTransition';
 import Button from '../components/Button';
-import { FaDownload, FaGraduationCap, FaMedal, FaEnvelope } from 'react-icons/fa';
+import { FaDownload, FaGraduationCap, FaMedal } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import './Resume.css';
 
@@ -45,22 +45,17 @@ function Resume() {
 
             <div className="sidebar-section">
               <h4><FaGraduationCap /> Education</h4>
-              <p><strong>B.Tech in Computer Science</strong><br/>Lovely Professional University<br/>Est. 2026</p>
+              <p><strong>B.Tech in Computer Science</strong><br/>Lovely Professional University<br/>Est. 2027</p>
             </div>
 
             <div className="sidebar-section">
               <h4><FaMedal /> Core Competencies</h4>
               <div className="badge-container">
-                <span className="skill-tag">Data Analytics</span>
+                <span className="skill-tag">Java</span>
                 <span className="skill-tag">Machine Learning</span>
                 <span className="skill-tag">Power BI</span>
                 <span className="skill-tag">Python & SQL</span>
               </div>
-            </div>
-            
-            <div className="sidebar-section">
-              <h4><FaEnvelope /> Contact</h4>
-              <p>gnaneswarraju10@gmail.com<br/>+91 7095877212</p>
             </div>
 
             <Button 
