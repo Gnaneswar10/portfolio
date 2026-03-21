@@ -112,10 +112,19 @@ ul {
   min-height: calc(100vh - 80px); /* 80px for navbar approx */
 }
 
+@keyframes mobileScrollPulse {
+  0% { box-shadow: var(--card-shadow); border-color: var(--card-border); }
+  50% { box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4); border-color: rgba(99, 102, 241, 0.7); }
+  100% { box-shadow: var(--card-shadow); border-color: var(--card-border); }
+}
+
 @media (max-width: 900px) {
   .glass-card {
     padding: 0.85rem;
     border-radius: 1rem;
+  }
+  .glass-card.mobile-glow-active {
+    animation: mobileScrollPulse 1.8s ease-in-out;
   }
   .section-padding {
     padding-top: calc(80px + 1.5rem);

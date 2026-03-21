@@ -19,6 +19,29 @@ import ScrollToTop from './components/ScrollToTop';
 function AppContent({ theme, toggleTheme }) {
   const location = useLocation();
 
+  useEffect(() => {
+    if (window.innerWidth > 900) return;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('mobile-glow-active');
+        } else {
+          entry.target.classList.remove('mobile-glow-active');
+        }
+      });
+    }, { threshold: 0.5 }); // Triggers when half the card is visible
+
+    const timeout = setTimeout(() => {
+      const cards = document.querySelectorAll('.glass-card');
+      cards.forEach(card => observer.observe(card));
+    }, 600); // 600ms delay ensures framer-motion finishes sliding them in
+
+    return () => {
+      clearTimeout(timeout);
+      observer.disconnect();
+    };
+  }, [location.pathname]);
+
   return (
     <div className="app" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Navbar theme={theme} toggleTheme={toggleTheme} />
