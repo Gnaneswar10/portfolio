@@ -48,17 +48,32 @@ function Contact() {
             </p>
             
             <div className="info-items">
-              <a href="mailto:gnaneswarraju10@gmail.com" className="info-item" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <FaEnvelope className="info-icon" />
-                <span>gnaneswarraju10@gmail.com</span>
+              <a href="mailto:gnaneswarraju10@gmail.com" className="info-card">
+                <div className="info-icon-wrapper">
+                  <FaEnvelope className="info-icon" />
+                </div>
+                <div className="info-details">
+                  <h4>Email</h4>
+                  <span>gnaneswarraju10@gmail.com</span>
+                </div>
               </a>
-              <a href="tel:7095877212" className="info-item" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <FaPhone className="info-icon" />
-                <span>+91 7095877212</span>
+              <a href="tel:7095877212" className="info-card">
+                <div className="info-icon-wrapper">
+                  <FaPhone className="info-icon" />
+                </div>
+                <div className="info-details">
+                  <h4>Phone</h4>
+                  <span>+91 7095877212</span>
+                </div>
               </a>
-              <div className="info-item">
-                <FaMapMarkerAlt className="info-icon" />
-                <span>Remote / Relocation</span>
+              <div className="info-card">
+                <div className="info-icon-wrapper">
+                  <FaMapMarkerAlt className="info-icon" />
+                </div>
+                <div className="info-details">
+                  <h4>Location</h4>
+                  <span>Remote / Relocation</span>
+                </div>
               </div>
             </div>
 
