@@ -7,6 +7,7 @@ import './Achievements.css';
 function Achievements() {
   const achievementsList = [
     "Awarded the trophy for 'Introduction to Cloud Infrastructure: Azure Architecture and Services'.",
+    "Solved over 70+ algorithmic coding problems on LeetCode, demonstrating strong data structure proficiency.",
     "Built multiple real-world projects in Data Analytics & Machine Learning.",
     "Developed interactive dashboards that provide actionable business insights.",
     "Completed 300+ hours of certified web development and programming training."
