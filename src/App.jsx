@@ -29,7 +29,10 @@ function AppContent({ theme, toggleTheme }) {
           entry.target.classList.remove('mobile-glow-active');
         }
       });
-    }, { threshold: 0.5 }); // Triggers when half the card is visible
+    }, { 
+      rootMargin: "-25% 0px -25% 0px", 
+      threshold: 0 
+    }); // Natively isolates the center 50% of the scrolling viewport
 
     const timeout = setTimeout(() => {
       const cards = document.querySelectorAll('.glass-card');
