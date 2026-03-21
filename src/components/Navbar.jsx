@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { FiSun, FiMoon } from 'react-icons/fi';
+import { FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi';
 import './Navbar.css';
 
 function Navbar({ theme, toggleTheme }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
   const links = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
@@ -24,11 +27,16 @@ function Navbar({ theme, toggleTheme }) {
             <span className="gradient-text" style={{ fontWeight: 700, fontSize: '1.5rem' }}>GR portfolio</span>
           </NavLink>
         </div>
-        <ul className="nav-links">
+        <div className="mobile-toggle" onClick={toggleMenu} aria-label="Toggle Menu">
+          {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+        </div>
+        
+        <ul className={isOpen ? "nav-links mobile-active" : "nav-links"}>
           {links.map(link => (
             <li key={link.name}>
               <NavLink 
                 to={link.path}
+                onClick={closeMenu}
                 className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
               >
                 {link.name}
@@ -36,7 +44,7 @@ function Navbar({ theme, toggleTheme }) {
             </li>
           ))}
           <li className="theme-toggle-wrapper">
-            <button onClick={toggleTheme} className="theme-toggle" aria-label="Toggle Theme">
+            <button onClick={() => { toggleTheme(); closeMenu(); }} className="theme-toggle" aria-label="Toggle Theme">
               {theme === 'dark' ? <FiSun size={20} /> : <FiMoon size={20} />}
             </button>
           </li>
