@@ -4,6 +4,7 @@ import PageTransition from '../components/PageTransition';
 import Button from '../components/Button';
 import { FaLaptopCode, FaFileAlt, FaPaperPlane } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { TypeAnimation } from 'react-type-animation';
 import './Home.css';
 
 function Home() {
@@ -40,8 +41,18 @@ function Home() {
         >
           <motion.h2 className="greeting" variants={itemVariants}>Hello, I'm</motion.h2>
           <motion.h1 className="name gradient-text" variants={itemVariants}>Gnaneswar Raju</motion.h1>
-          <motion.h3 className="title" variants={itemVariants}>
-            Aspiring Data Analyst <span className="divider">|</span> Data Science Enthusiast <span className="divider">|</span> Problem Solver
+          <motion.h3 className="title" variants={itemVariants} style={{ display: 'flex', alignItems: 'center', height: '1.5rem', marginBottom: '1.5rem' }}>
+            <TypeAnimation
+              sequence={[
+                1000, // Short delay before typing starts
+                'Aspiring Data Analyst | Data Science Enthusiast | Problem Solver'
+              ]}
+              wrapper="span"
+              speed={50}
+              cursor={true}
+              repeat={0}
+              style={{ display: 'inline-block' }}
+            />
           </motion.h3>
           <motion.p className="bio" variants={itemVariants}>
             Passionate Computer Science student skilled in data analytics, machine learning, and software development. 
