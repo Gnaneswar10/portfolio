@@ -19,12 +19,6 @@ function Projects() {
       githubLink: 'https://github.com'
     },
     {
-      title: 'Intelligent CPU Scheduler',
-      description: 'Visual simulator of CPU scheduling algorithms supporting FCFS, SJF, Round Robin, and Priority scheduling. Provides real-time comparison of scheduling performance.',
-      tools: ['C++', 'HTML', 'CSS', 'JavaScript'],
-      githubLink: 'https://github.com'
-    },
-    {
       title: 'Swiftcart E-Commerce API',
       description: 'Engineered a tailored backend routing architecture and RESTful APIs for a robust e-commerce application platform, focusing on seamless data flow and robust user endpoints.',
       tools: ['JavaScript', 'HTML/CSS', 'Backend Routing'],
