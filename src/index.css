@@ -91,3 +91,13 @@ ul {
   min-height: calc(100vh - 80px); /* 80px for navbar approx */
   padding-top: 80px; 
 }
+
+@media (max-width: 900px) {
+  .glass-card {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+  .section-padding {
+    padding: 4rem 0;
+  }
+}
