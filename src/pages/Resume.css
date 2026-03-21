@@ -1,0 +1,41 @@
+.resume-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resume-actions {
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.resume-viewer {
+  width: 100%;
+  max-width: 900px;
+  height: 70vh;
+  min-height: 600px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.pdf-container {
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: #fff; /* PDFs usually need white bg */
+}
+
+.pdf-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #333;
+}
