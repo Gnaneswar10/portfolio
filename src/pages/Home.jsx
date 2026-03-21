@@ -45,7 +45,7 @@ function Home() {
             <TypeAnimation
               sequence={[
                 1000, // Short delay before typing starts
-                'Aspiring Data Analyst | Data Science Enthusiast | Problem Solver'
+                'Aspiring Data Analyst | Turning Data into Meaningful Insights'
               ]}
               wrapper="span"
               speed={50}
