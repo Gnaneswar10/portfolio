@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import PageTransition from '../components/PageTransition';
 import Button from '../components/Button';
+import { FaLaptopCode, FaFileAlt, FaPaperPlane } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import './Home.css';
 
@@ -46,15 +47,15 @@ function Home() {
             Passionate Computer Science student skilled in data analytics, machine learning, and software development. 
             Experienced in building data-driven dashboards, predictive systems, and algorithm simulations.
           </motion.p>
-          <motion.div className="cta-group" variants={itemVariants}>
-            <Button variant="primary" onClick={() => navigate('/projects')}>
-              View Projects
+          <motion.div className="cta-group" variants={itemVariants} style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <Button variant="primary" onClick={() => navigate('/projects')} style={{ flex: 1, minWidth: '140px' }}>
+              <FaLaptopCode /> Projects
             </Button>
-            <Button variant="outline" onClick={() => navigate('/resume')}>
-              View Resume
+            <Button variant="primary" onClick={() => navigate('/resume')} style={{ flex: 1, minWidth: '140px' }}>
+              <FaFileAlt /> Resume
             </Button>
-            <Button variant="secondary" onClick={() => navigate('/contact')}>
-              Contact Me
+            <Button variant="primary" onClick={() => navigate('/contact')} style={{ flex: 1, minWidth: '140px' }}>
+              <FaPaperPlane /> Contact
             </Button>
           </motion.div>
         </motion.div>
