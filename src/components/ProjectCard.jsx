@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaExternalLinkAlt, FaChartLine, FaExclamationCircle, FaTools } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaChartLine, FaTools } from 'react-icons/fa';
 import './ProjectCard.css';
 
 function ProjectCard({ title, problemStatement, insights, tools, githubLink, liveLink }) {
@@ -11,7 +11,7 @@ function ProjectCard({ title, problemStatement, insights, tools, githubLink, liv
       
       <div className="project-body">
         <div className="project-section">
-          <h4 className="section-heading"><FaExclamationCircle className="section-icon problem-icon" /> Problem Statement</h4>
+          <h4 className="section-heading">Problem Statement</h4>
           <p className="section-text">{problemStatement}</p>
         </div>
 

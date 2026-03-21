@@ -27,13 +27,13 @@ function Projects() {
       githubLink: 'https://github.com'
     },
     {
-      title: 'Swiftcart E-Commerce API',
+      title: 'SwiftCart – E-Commerce Web App',
       problemStatement: 'A modern e-commerce deployment required a scalable, secure, and lightning-fast backend REST architecture to flawlessly handle high-volume data flows across product inventories and user endpoint queries.',
       insights: [
         'Engineered a tailored backend routing network that drastically optimized database fetch speeds and response times.',
         'Established impenetrable, secure RESTful APIs seamlessly bridging the frontend rendering systems with backend SQL datastores.'
       ],
-      tools: ['JavaScript', 'HTML/CSS', 'Backend Routing'],
+      tools: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'REST APIs', 'Tailwind CSS'],
       githubLink: 'https://github.com/Gnaneswar10/swiftcart'
     }
   ];
