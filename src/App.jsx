@@ -14,6 +14,7 @@ import Footer from './components/Footer';
 import { AnimatePresence } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
+import ScrollToTop from './components/ScrollToTop';
 
 function AppContent({ theme, toggleTheme }) {
   const location = useLocation();
@@ -60,6 +61,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <AppContent theme={theme} toggleTheme={toggleTheme} />
     </Router>
   );
