@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import './Projects.css';
 
 function Projects() {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 900;
+
   const projects = [
     {
       title: 'Global Electronics Retail Analytics',
@@ -58,7 +60,14 @@ function Projects() {
               key={index}
               variants={{
                 hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100, damping: 12 } }
+                visible: { 
+                  opacity: 1, y: 0, 
+                  ...(isMobile && { boxShadow: ["var(--card-shadow)", "0 15px 40px rgba(99, 102, 241, 0.5)", "var(--card-shadow)"] }),
+                  transition: { 
+                    type: 'spring', stiffness: 100, damping: 12,
+                    ...(isMobile && { boxShadow: { duration: 1.5, times: [0, 0.3, 1] } })
+                  } 
+                }
               }}
             >
               <ProjectCard {...project} />

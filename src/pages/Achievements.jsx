@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import './Achievements.css';
 
 function Achievements() {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 900;
+
   const achievementsList = [
     "Awarded the trophy for 'Introduction to Cloud Infrastructure: Azure Architecture and Services'.",
     "Solved over 70+ algorithmic coding problems on LeetCode, demonstrating strong data structure proficiency.",
@@ -23,7 +25,14 @@ function Achievements() {
 
   const itemVariants = {
     hidden: { opacity: 0, x: -20 },
-    visible: { opacity: 1, x: 0, transition: { type: 'spring', stiffness: 100 } }
+    visible: { 
+      opacity: 1, x: 0, 
+      ...(isMobile && { boxShadow: ["var(--card-shadow)", "0 15px 40px rgba(99, 102, 241, 0.5)", "var(--card-shadow)"] }),
+      transition: { 
+        type: 'spring', stiffness: 100,
+        ...(isMobile && { boxShadow: { duration: 1.5, times: [0, 0.3, 1] } })
+      } 
+    }
   };
 
   return (

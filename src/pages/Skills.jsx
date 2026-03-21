@@ -10,6 +10,8 @@ import { motion } from 'framer-motion';
 import './Skills.css';
 
 function Skills() {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 900;
+
   const technicalSkills = [
     { name: 'Python', icon: <FaPython />, level: 90 },
     { name: 'Java', icon: <FaJava />, level: 85 },
@@ -50,7 +52,11 @@ function Skills() {
     hidden: { opacity: 0, scale: 0.9, y: 20 },
     visible: { 
       opacity: 1, scale: 1, y: 0, 
-      transition: { type: 'spring', stiffness: 100, damping: 12 } 
+      ...(isMobile && { boxShadow: ["var(--card-shadow)", "0 15px 40px rgba(99, 102, 241, 0.5)", "var(--card-shadow)"] }),
+      transition: { 
+        type: 'spring', stiffness: 100, damping: 12,
+        ...(isMobile && { boxShadow: { duration: 1.5, times: [0, 0.3, 1] } })
+      } 
     }
   };
 

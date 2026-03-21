@@ -6,6 +6,8 @@ import { motion } from 'framer-motion';
 import './Certifications.css';
 
 function Certifications() {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 900;
+
   const certs = [
     { 
       title: 'Master Generative AI and Generative AI Tools', 
@@ -39,7 +41,14 @@ function Certifications() {
 
   const itemVariants = {
     hidden: { opacity: 0, scale: 0.8, y: 20 },
-    visible: { opacity: 1, scale: 1, y: 0, transition: { type: 'spring', stiffness: 100, damping: 12 } }
+    visible: { 
+      opacity: 1, scale: 1, y: 0, 
+      ...(isMobile && { boxShadow: ["var(--card-shadow)", "0 15px 40px rgba(99, 102, 241, 0.5)", "var(--card-shadow)"] }),
+      transition: { 
+        type: 'spring', stiffness: 100, damping: 12,
+        ...(isMobile && { boxShadow: { duration: 1.5, times: [0, 0.3, 1] } })
+      } 
+    }
   };
 
   return (
