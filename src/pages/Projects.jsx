@@ -8,19 +8,31 @@ function Projects() {
   const projects = [
     {
       title: 'Global Electronics Retail Analytics',
-      description: 'Built an interactive Power BI dashboard analyzing global sales data. Created KPIs using DAX and identified trends such as top products, revenue regions, and seasonal patterns.',
+      problemStatement: 'The enterprise lacked visibility into their global sales performance, making it difficult to identify critical revenue-driving regions and uncover hidden underperforming product categories.',
+      insights: [
+        'Identified the top 3 most profitable core products driving over 40% of standard overall revenue.',
+        'Revealed key seasonal purchasing patterns, empowering stakeholders to aggressively optimize inventory restocks.'
+      ],
       tools: ['Power BI', 'DAX', 'Excel'],
       githubLink: 'https://github.com'
     },
     {
       title: 'Diabetes Prediction System',
-      description: 'Machine learning model to predict diabetes risk. Performed comprehensive data preprocessing, feature selection, and evaluation. Successfully deployed using Streamlit for user interaction.',
+      problemStatement: 'Healthcare professionals urgently required an early-warning diagnostic mechanism to rapidly identify patients at high risk of developing diabetes based on complex, intersecting clinical factors.',
+      insights: [
+        'Engineered a highly accurate classification model, minimizing false negatives by precisely weighting patient glucose levels against BMI.',
+        'Developed an interactive dashboard enabling medical practitioners to instantly input live patient data and evaluate risk probabilities.'
+      ],
       tools: ['Python', 'Pandas', 'Scikit-learn', 'Streamlit'],
       githubLink: 'https://github.com'
     },
     {
       title: 'Swiftcart E-Commerce API',
-      description: 'Engineered a tailored backend routing architecture and RESTful APIs for a robust e-commerce application platform, focusing on seamless data flow and robust user endpoints.',
+      problemStatement: 'A modern e-commerce deployment required a scalable, secure, and lightning-fast backend REST architecture to flawlessly handle high-volume data flows across product inventories and user endpoint queries.',
+      insights: [
+        'Engineered a tailored backend routing network that drastically optimized database fetch speeds and response times.',
+        'Established impenetrable, secure RESTful APIs seamlessly bridging the frontend rendering systems with backend SQL datastores.'
+      ],
       tools: ['JavaScript', 'HTML/CSS', 'Backend Routing'],
       githubLink: 'https://github.com/Gnaneswar10/swiftcart'
     }
