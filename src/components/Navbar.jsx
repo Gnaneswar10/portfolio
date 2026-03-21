@@ -24,7 +24,7 @@ function Navbar({ theme, toggleTheme }) {
       <div className="nav-container container">
         <div className="nav-logo">
           <NavLink to="/">
-            <span className="gradient-text" style={{ fontWeight: 700, fontSize: '1.5rem' }}>GR portfolio</span>
+            <span className="gradient-text" style={{ fontWeight: 700, fontSize: '1.5rem' }}>GR Portfolio</span>
           </NavLink>
         </div>
         <div className="mobile-toggle" onClick={toggleMenu} aria-label="Toggle Menu">
