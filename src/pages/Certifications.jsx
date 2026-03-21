@@ -2,6 +2,7 @@ import React from 'react';
 import PageTransition from '../components/PageTransition';
 import Button from '../components/Button';
 import { FaCertificate } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 import './Certifications.css';
 
 function Certifications() {
@@ -28,6 +29,19 @@ function Certifications() {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0.8, y: 20 },
+    visible: { opacity: 1, scale: 1, y: 0, transition: { type: 'spring', stiffness: 100, damping: 12 } }
+  };
+
   return (
     <PageTransition>
       <div className="page-wrapper container section-padding">
@@ -36,9 +50,15 @@ function Certifications() {
           Continuous learning and verified skills representation.
         </p>
 
-        <div className="certs-grid">
+        <motion.div 
+          className="certs-grid"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
           {certs.map((cert, index) => (
-            <div key={index} className="cert-card glass-card">
+            <motion.div key={index} className="cert-card glass-card" variants={itemVariants}>
               <div className="cert-icon-wrapper">
                 <FaCertificate className="cert-main-icon" />
               </div>
@@ -54,9 +74,9 @@ function Certifications() {
                   View Certificate
                 </Button>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </PageTransition>
   );

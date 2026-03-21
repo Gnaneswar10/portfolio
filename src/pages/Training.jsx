@@ -1,6 +1,7 @@
 import React from 'react';
 import PageTransition from '../components/PageTransition';
 import { FaLaptopCode, FaCheckCircle, FaBriefcase, FaCloud } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 import './Training.css';
 
 function Training() {
@@ -30,6 +31,19 @@ function Training() {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -30 },
+    visible: { opacity: 1, x: 0, transition: { type: 'spring', stiffness: 100 } }
+  };
+
   return (
     <PageTransition>
       <div className="page-wrapper container section-padding">
@@ -38,9 +52,15 @@ function Training() {
           Professional internships, training, and continuous learning that enhanced my practical skills.
         </p>
 
-        <div className="timeline-container">
+        <motion.div 
+          className="timeline-container"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {experiences.map((exp, index) => (
-            <div key={index} className="timeline-item glass-card">
+            <motion.div key={index} className="timeline-item glass-card" variants={itemVariants}>
               <div className="timeline-icon">
                 {exp.icon}
               </div>
@@ -65,9 +85,9 @@ function Training() {
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </PageTransition>
   );

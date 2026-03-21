@@ -6,6 +6,7 @@ import {
   FaDatabase, FaChartBar, FaBrain, FaLightbulb, 
   FaUsers, FaSyncAlt, FaLaptopCode, FaChartPie, FaCloud 
 } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 import './Skills.css';
 
 function Skills() {
@@ -37,6 +38,22 @@ function Skills() {
     { name: 'Adaptability', icon: <FaSyncAlt />, level: 90 },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0.9, y: 20 },
+    visible: { 
+      opacity: 1, scale: 1, y: 0, 
+      transition: { type: 'spring', stiffness: 100, damping: 12 } 
+    }
+  };
+
   return (
     <PageTransition>
       <div className="page-wrapper container section-padding">
@@ -48,29 +65,35 @@ function Skills() {
         <div className="skills-grid-wrapper">
           <div className="skills-section">
             <h3 className="skills-category-title">Technical Skills</h3>
-            <div className="skills-grid">
+            <motion.div className="skills-grid" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
               {technicalSkills.map(skill => (
-                <SkillBadge key={skill.name} {...skill} />
+                <motion.div key={skill.name} variants={itemVariants}>
+                  <SkillBadge {...skill} />
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
 
           <div className="skills-section">
             <h3 className="skills-category-title">Data Skills</h3>
-            <div className="skills-grid">
+            <motion.div className="skills-grid" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
               {dataSkills.map(skill => (
-                <SkillBadge key={skill.name} {...skill} />
+                <motion.div key={skill.name} variants={itemVariants}>
+                  <SkillBadge {...skill} />
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
 
           <div className="skills-section">
             <h3 className="skills-category-title">Soft Skills</h3>
-            <div className="skills-grid">
+            <motion.div className="skills-grid" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
               {softSkills.map(skill => (
-                <SkillBadge key={skill.name} {...skill} />
+                <motion.div key={skill.name} variants={itemVariants}>
+                  <SkillBadge {...skill} />
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

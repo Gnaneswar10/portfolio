@@ -1,6 +1,7 @@
 import React from 'react';
 import PageTransition from '../components/PageTransition';
 import { FaTrophy, FaStar } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 import './Achievements.css';
 
 function Achievements() {
@@ -10,6 +11,19 @@ function Achievements() {
     "Developed interactive dashboards that provide actionable business insights.",
     "Completed 300+ hours of certified web development and programming training."
   ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: { opacity: 1, x: 0, transition: { type: 'spring', stiffness: 100 } }
+  };
 
   return (
     <PageTransition>
@@ -22,16 +36,21 @@ function Achievements() {
           </p>
         </div>
 
-        <div className="achievements-list glass-card">
+        <motion.div 
+          className="achievements-list glass-card"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           {achievementsList.map((item, index) => (
-            <div key={index} className="achievement-row">
+            <motion.div key={index} className="achievement-row" variants={itemVariants}>
               <div className="achievement-icon">
                 <FaStar />
               </div>
               <p className="achievement-text">{item}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </PageTransition>
   );
