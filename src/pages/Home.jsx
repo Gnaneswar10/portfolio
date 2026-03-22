@@ -48,19 +48,19 @@ function Home() {
             Hello, I'm <br />
             <span className="gradient-text">Gnaneswar Raju</span>
           </h1>
-          <h2 className="home-subtitle">
-            <TypeAnimation
-              sequence={[
-                'Aspiring Data Analyst',
-                2000,
-                'Turning Data into Meaningful Insights',
-                2000,
-              ]}
-              wrapper="span"
-              cursor={true}
-              repeat={Infinity}
-            />
-          </h2>
+            <h2 className="home-subtitle" style={{ lineHeight: 1.6 }}>
+              <TypeAnimation
+                sequence={[
+                  'Aspiring Data Analyst',
+                  2000,
+                  'Turning Data into Meaningful Insights',
+                  2000,
+                ]}
+                wrapper="span"
+                cursor={true}
+                repeat={Infinity}
+              />
+            </h2>
           <p className="home-description">
             Passionate Computer Science student skilled in data analytics, machine learning, and software development. Experienced in building data-driven dashboards, predictive systems, and algorithm simulations.
           </p>
