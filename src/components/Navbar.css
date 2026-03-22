@@ -28,33 +28,34 @@
   font-weight: 500;
   color: var(--text-color);
   font-size: 0.95rem;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   position: relative;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  z-index: 10;
 }
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: var(--primary-gradient);
-  left: 0;
-  bottom: -4px;
-  transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  border-radius: 2px;
+.nav-link:hover {
+  color: #6366f1;
 }
 
-.nav-link:hover::after,
-.nav-link.active::after {
-  width: 100%;
-}
-
-.nav-link:hover,
 .nav-link.active {
-  color: transparent;
+  color: #ffffff;
+}
+
+.nav-active-box {
+  position: absolute;
+  inset: 0;
   background: var(--primary-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
+  border-radius: 2rem;
+  z-index: -1;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.link-text {
+  position: relative;
+  z-index: 1;
 }
 
 .theme-toggle-wrapper {

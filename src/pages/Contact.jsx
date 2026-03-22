@@ -1,7 +1,4 @@
-import React, { useState } from 'react';
-import PageTransition from '../components/PageTransition';
-import Button from '../components/Button';
-import { FaEnvelope, FaLinkedin, FaGithub, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 import './Contact.css';
 
 function Contact() {
@@ -35,13 +32,26 @@ function Contact() {
   return (
     <PageTransition>
       <div className="page-wrapper container section-padding contact-page">
-        <h2 className="section-title gradient-text">Get In Touch</h2>
-        <p className="section-subtitle">
-          Have a question or want to work together? Let's connect!
-        </p>
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="section-title gradient-text">Get In Touch</h2>
+          <p className="section-subtitle">
+            Have a question or want to work together? Let's connect!
+          </p>
+        </motion.div>
 
         <div className="contact-content">
-          <div className="contact-info glass-card">
+          <motion.div 
+            className="contact-info glass-card"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
             <h3 className="contact-heading">Contact Information</h3>
             <p className="contact-desc">
               Fill out the form and I will get back to you within 24 hours.
@@ -88,9 +98,15 @@ function Contact() {
                 <FaEnvelope />
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="contact-form-wrapper glass-card">
+          <motion.div 
+            className="contact-form-wrapper glass-card"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="name">Your Name</label>
@@ -117,7 +133,7 @@ function Contact() {
                 </p>
               )}
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </PageTransition>

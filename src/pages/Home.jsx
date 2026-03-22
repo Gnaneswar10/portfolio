@@ -35,46 +35,54 @@ function Home() {
       <div className="page-wrapper container home-container">
         <motion.div 
           className="home-content"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <motion.h2 className="greeting" variants={itemVariants}>Hello, I'm</motion.h2>
-          <motion.h1 className="name gradient-text" variants={itemVariants}>Gnaneswar Raju</motion.h1>
-          <motion.h3 className="title" variants={itemVariants} style={{ display: 'flex', alignItems: 'center', height: '1.5rem', marginBottom: '1.5rem' }}>
+          <div className="home-badge">
+            <span className="badge-dot"></span>
+            Available for new projects
+          </div>
+          <h1 className="home-title">
+            Hello, I'm <br />
+            <span className="gradient-text">Gnaneswar Raju</span>
+          </h1>
+          <h2 className="home-subtitle">
             <TypeAnimation
               sequence={[
-                1000, // Short delay before typing starts
-                'Aspiring Data Analyst | Turning Data into Meaningful Insights'
+                'Aspiring Data Analyst',
+                2000,
+                'Turning Data into Meaningful Insights',
+                2000,
               ]}
               wrapper="span"
-              speed={50}
               cursor={true}
-              repeat={0}
-              style={{ display: 'inline-block' }}
+              repeat={Infinity}
             />
-          </motion.h3>
-          <motion.p className="bio" variants={itemVariants}>
-            Passionate Computer Science student skilled in data analytics, machine learning, and software development. 
-            Experienced in building data-driven dashboards, predictive systems, and algorithm simulations.
-          </motion.p>
-          <motion.div className="cta-group" variants={itemVariants} style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <Button variant="primary" onClick={() => navigate('/projects')} style={{ flex: 1, minWidth: '140px' }}>
-              <FaLaptopCode /> Projects
+          </h2>
+          <p className="home-description">
+            Passionate Computer Science student skilled in data analytics, machine learning, and software development. Experienced in building data-driven dashboards, predictive systems, and algorithm simulations.
+          </p>
+          <div className="home-cta">
+            <Button size="lg" onClick={() => navigate('/projects')}>
+              <FaBriefcase style={{ marginRight: '0.5rem' }} /> Projects
             </Button>
-            <Button variant="primary" onClick={() => navigate('/resume')} style={{ flex: 1, minWidth: '140px' }}>
-              <FaFileAlt /> Resume
+            <Button variant="outline" size="lg" onClick={() => navigate('/resume')}>
+              <FaFileDownload style={{ marginRight: '0.5rem' }} /> Resume
             </Button>
-            <Button variant="primary" onClick={() => navigate('/contact')} style={{ flex: 1, minWidth: '140px' }}>
-              <FaPaperPlane /> Contact
+            <Button variant="secondary" size="lg" onClick={() => navigate('/contact')}>
+              <FaPaperPlane style={{ marginRight: '0.5rem' }} /> Contact
             </Button>
-          </motion.div>
+          </div>
         </motion.div>
+
         <motion.div 
-          className="home-image-container"
-          initial={{ opacity: 0, scale: 0.85, filter: 'blur(10px)' }}
-          animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+          className="home-image-container" // Kept original class name for consistency with CSS
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
           <div className="image-wrapper">
             <img src="/profile.jpg" alt="Gnaneswar Raju" className="profile-image" />

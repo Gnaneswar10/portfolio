@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi';
+import { motion, AnimatePresence } from 'framer-motion';
 import './Navbar.css';
 
 function Navbar({ theme, toggleTheme }) {
@@ -33,13 +34,29 @@ function Navbar({ theme, toggleTheme }) {
         
         <ul className={isOpen ? "nav-links mobile-active" : "nav-links"}>
           {links.map(link => (
-            <li key={link.name}>
+            <li key={link.name} style={{ position: 'relative' }}>
               <NavLink 
                 to={link.path}
                 onClick={closeMenu}
                 className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
               >
-                {link.name}
+                {({ isActive }) => (
+                  <>
+                    <span className="link-text">{link.name}</span>
+                    {isActive && (
+                      <motion.div 
+                        layoutId="nav-pill"
+                        className="nav-active-box"
+                        initial={false}
+                        transition={{
+                          type: "spring",
+                          stiffness: 380,
+                          damping: 30
+                        }}
+                      />
+                    )}
+                  </>
+                )}
               </NavLink>
             </li>
           ))}

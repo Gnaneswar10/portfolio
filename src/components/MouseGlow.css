@@ -1,0 +1,22 @@
+.mouse-glow {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.05) 40%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Above starfield, below content */
+  transition: width 0.3s ease, height 0.3s ease;
+  filter: blur(80px);
+}
+
+html.dark .mouse-glow {
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, rgba(168, 85, 247, 0.03) 45%, transparent 70%);
+}
+
+@media (max-width: 900px) {
+  .mouse-glow {
+    display: none; /* Disable on mobile for performance and lack of hover */
+  }
+}

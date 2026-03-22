@@ -41,7 +41,8 @@ function Achievements() {
           className="achievements-list glass-card"
           variants={containerVariants}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
           {achievementsList.map((item, index) => (
             <motion.div key={index} className="achievement-row" variants={itemVariants}>

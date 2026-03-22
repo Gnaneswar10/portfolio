@@ -12,6 +12,7 @@ import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import Starfield from './components/Starfield';
+import MouseGlow from './components/MouseGlow';
 import { AnimatePresence } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
@@ -49,6 +50,7 @@ function AppContent({ theme, toggleTheme }) {
   return (
     <div className="app" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Starfield />
+      <MouseGlow />
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main style={{ flex: 1 }}>
         <AnimatePresence mode="wait">
