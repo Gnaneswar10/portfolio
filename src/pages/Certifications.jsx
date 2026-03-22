@@ -62,11 +62,15 @@ function Certifications() {
               <div className="cert-card-inner">
                 {/* Front Side */}
                 <div className="cert-card-front glass-card">
-                  <div className="cert-icon-wrapper">
-                    <FaCertificate className="cert-main-icon" />
+                  <div className="cert-front-banner"></div>
+                  <div className="cert-front-content">
+                    <div className="cert-icon-wrapper">
+                      <FaCertificate className="cert-main-icon" />
+                    </div>
+                    <h3 className="cert-title">{cert.title}</h3>
+                    <p className="cert-issuer">{cert.issuer}</p>
+                    <span className="cert-hover-hint">Hover to view</span>
                   </div>
-                  <h3 className="cert-title">{cert.title}</h3>
-                  <p className="cert-issuer">{cert.issuer}</p>
                 </div>
                 
                 {/* Back Side */}
