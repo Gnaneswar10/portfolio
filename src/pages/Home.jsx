@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import PageTransition from '../components/PageTransition';
 import Button from '../components/Button';
-import { FaLaptopCode, FaFileAlt, FaPaperPlane } from 'react-icons/fa';
+import { FaLaptopCode, FaFileAlt, FaPaperPlane, FaBriefcase, FaFileDownload } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import './Home.css';

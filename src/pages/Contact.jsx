@@ -1,4 +1,8 @@
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import PageTransition from '../components/PageTransition';
+import Button from '../components/Button';
+import { FaEnvelope, FaLinkedin, FaGithub, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 import './Contact.css';
 
 function Contact() {
