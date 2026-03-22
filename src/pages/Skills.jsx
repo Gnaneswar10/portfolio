@@ -11,31 +11,31 @@ import './Skills.css';
 
 function Skills() {
   const technicalSkills = [
-    { name: 'Python', icon: <FaPython />, level: 90 },
-    { name: 'Java', icon: <FaJava />, level: 85 },
-    { name: 'C++', icon: <FaCode />, level: 80 },
-    { name: 'HTML', icon: <FaHtml5 />, level: 95 },
-    { name: 'CSS', icon: <FaCss3Alt />, level: 90 },
-    { name: 'Django', icon: <FaLaptopCode />, level: 75 },
-    { name: 'MySQL / Adv. SQL', icon: <FaDatabase />, level: 85 },
-    { name: 'Power BI', icon: <FaChartPie />, level: 80 },
-    { name: 'Excel', icon: <FaChartBar />, level: 90 },
-    { name: 'Azure Cloud', icon: <FaCloud />, level: 75 },
-    { name: 'Full-Stack Dev', icon: <FaLaptopCode />, level: 85 },
+    { name: 'Python', icon: <FaPython color="#3776AB" />, level: 90 },
+    { name: 'Java', icon: <FaJava color="#ed8b00" />, level: 85 },
+    { name: 'C++', icon: <FaCode color="#00599C" />, level: 80 },
+    { name: 'HTML', icon: <FaHtml5 color="#E34F26" />, level: 95 },
+    { name: 'CSS', icon: <FaCss3Alt color="#1572B6" />, level: 90 },
+    { name: 'Django', icon: <FaLaptopCode color="#092E20" />, level: 75 },
+    { name: 'MySQL / Adv. SQL', icon: <FaDatabase color="#4479A1" />, level: 85 },
+    { name: 'Power BI', icon: <FaChartPie color="#F2C811" />, level: 80 },
+    { name: 'Excel', icon: <FaChartBar color="#217346" />, level: 90 },
+    { name: 'Azure Cloud', icon: <FaCloud color="#0089D6" />, level: 75 },
+    { name: 'Full-Stack Dev', icon: <FaLaptopCode color="#6366f1" />, level: 85 },
   ];
 
   const dataSkills = [
-    { name: 'Data Analysis', icon: <FaChartBar />, level: 92 },
-    { name: 'Data Visualization', icon: <FaChartPie />, level: 88 },
-    { name: 'Machine Learning', icon: <FaBrain />, level: 80 },
-    { name: 'Dashboard Dev', icon: <FaLaptopCode />, level: 85 },
+    { name: 'Data Analysis', icon: <FaChartBar color="#6366f1" />, level: 92 },
+    { name: 'Data Visualization', icon: <FaChartPie color="#f43f5e" />, level: 88 },
+    { name: 'Machine Learning', icon: <FaBrain color="#10b981" />, level: 80 },
+    { name: 'Dashboard Dev', icon: <FaLaptopCode color="#0ea5e9" />, level: 85 },
   ];
 
   const softSkills = [
-    { name: 'Problem Solving', icon: <FaLightbulb />, level: 95 },
-    { name: 'Leadership', icon: <FaUsers />, level: 85 },
-    { name: 'Teamwork', icon: <FaUsers />, level: 90 },
-    { name: 'Adaptability', icon: <FaSyncAlt />, level: 90 },
+    { name: 'Problem Solving', icon: <FaLightbulb color="#fbbf24" />, level: 95 },
+    { name: 'Leadership', icon: <FaUsers color="#8b5cf6" />, level: 85 },
+    { name: 'Teamwork', icon: <FaUsers color="#ec4899" />, level: 90 },
+    { name: 'Adaptability', icon: <FaSyncAlt color="#14b8a6" />, level: 90 },
   ];
 
   const containerVariants = {

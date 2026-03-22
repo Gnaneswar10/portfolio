@@ -18,46 +18,18 @@
   pointer-events: none;
 }
 
-.bg-blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(60px);
-  opacity: 0.3;
+.animated-gradient-bg {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #0e121e, #1e1b4b, #2e1065, #1d1840);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
 }
 
-.blob-3 {
-  width: 400px;
-  height: 400px;
-  background: #6366f1; /* primary color fallback */
-  top: 5%;
-  left: -100px;
-  animation: floatLarge 15s ease-in-out infinite;
-}
-
-.blob-4 {
-  width: 350px;
-  height: 350px;
-  background: #3b82f6;
-  bottom: -50px;
-  right: 5%;
-  animation: floatLarge 18s ease-in-out infinite reverse;
-}
-
-.blob-5 {
-  width: 500px;
-  height: 500px;
-  background: #ec4899; /* secondary/accent color */
-  top: 30%;
-  left: 30%;
-  animation: floatLarge 22s ease-in-out infinite 2s;
-  opacity: 0.15;
-}
-
-@keyframes floatLarge {
-  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
-  33% { transform: translate(30px, -50px) scale(1.1) rotate(120deg); }
-  66% { transform: translate(-20px, 20px) scale(0.9) rotate(240deg); }
-  100% { transform: translate(0, 0) scale(1) rotate(360deg); }
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .home-content {

@@ -58,30 +58,21 @@ function Certifications() {
           viewport={{ once: true, amount: 0.1 }}
         >
           {certs.map((cert, index) => (
-            <motion.div key={index} className="cert-card-container" variants={itemVariants}>
-              <div className="cert-card-inner">
-                {/* Front Side */}
-                <div className="cert-card-front glass-card">
-                  <div className="cert-icon-wrapper">
-                    <FaCertificate className="cert-main-icon" />
-                  </div>
-                  <h3 className="cert-title">{cert.title}</h3>
-                  <p className="cert-issuer">{cert.issuer}</p>
-                </div>
-                
-                {/* Back Side */}
-                <div className="cert-card-back glass-card">
-                  <h3 className="cert-title" style={{ marginBottom: '1.5rem' }}>{cert.title}</h3>
-                  <div className="cert-action">
-                    <Button 
-                      variant="outline" 
-                      style={{ width: '100%', padding: '0.5rem 1rem' }}
-                      onClick={() => window.open(cert.link, '_blank', 'noopener,noreferrer')}
-                    >
-                      View Certificate
-                    </Button>
-                  </div>
-                </div>
+            <motion.div key={index} className="cert-card glass-card" variants={itemVariants}>
+              <div className="cert-icon-wrapper">
+                <FaCertificate className="cert-main-icon" />
+              </div>
+              <h3 className="cert-title">{cert.title}</h3>
+              <p className="cert-issuer">{cert.issuer}</p>
+              
+              <div className="cert-action">
+                <Button 
+                  variant="outline" 
+                  style={{ width: '100%', padding: '0.5rem 1rem' }}
+                  onClick={() => window.open(cert.link, '_blank', 'noopener,noreferrer')}
+                >
+                  View Certificate
+                </Button>
               </div>
             </motion.div>
           ))}

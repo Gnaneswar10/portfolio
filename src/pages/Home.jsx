@@ -34,11 +34,7 @@ function Home() {
     <PageTransition>
       <div className="page-wrapper container home-container">
         {/* Continuous Background Animations */}
-        <div className="background-animation-container">
-          <div className="bg-blob blob-3"></div>
-          <div className="bg-blob blob-4"></div>
-          <div className="bg-blob blob-5"></div>
-        </div>
+        <div className="background-animation-container animated-gradient-bg"></div>
 
         <motion.div 
           className="home-content"
