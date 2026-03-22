@@ -71,6 +71,7 @@ function Home() {
             <Button variant="secondary" size="lg" onClick={() => navigate('/contact')}>
               <FaPaperPlane style={{ marginRight: '0.5rem' }} /> Contact
             </Button>
+            </div>
           </div>
         </motion.div>
 
