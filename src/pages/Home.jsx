@@ -65,10 +65,10 @@ function Home() {
             <Button size="lg" onClick={() => navigate('/projects')}>
               <FaBriefcase style={{ marginRight: '0.5rem' }} /> Projects
             </Button>
-            <Button variant="outline" size="lg" onClick={() => navigate('/resume')}>
+            <Button size="lg" onClick={() => navigate('/resume')}>
               <FaFileDownload style={{ marginRight: '0.5rem' }} /> Resume
             </Button>
-            <Button variant="secondary" size="lg" onClick={() => navigate('/contact')}>
+            <Button size="lg" onClick={() => navigate('/contact')}>
               <FaPaperPlane style={{ marginRight: '0.5rem' }} /> Contact
             </Button>
             </div>
