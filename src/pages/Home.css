@@ -64,10 +64,15 @@
   max-width: 650px;
 }
 
-.cta-group {
+.home-cta {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.home-cta button {
+  min-width: 160px;
 }
 
 /* Image Side */
