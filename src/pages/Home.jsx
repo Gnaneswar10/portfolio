@@ -33,34 +33,6 @@ function Home() {
   return (
     <PageTransition>
       <div className="page-wrapper container home-container">
-        {/* Continuous Background Animations */}
-        <div className="background-animation-container starfield-bg">
-          {[...Array(50)].map((_, i) => (
-            <div 
-              key={i} 
-              className="star" 
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDuration: `${Math.random() * 3 + 2}s`,
-                animationDelay: `${Math.random() * 5}s`
-              }}
-            ></div>
-          ))}
-          {[...Array(4)].map((_, i) => (
-            <div 
-              key={`ast-${i}`} 
-              className="asteroid" 
-              style={{
-                top: `${Math.random() * 80 + 10}%`,
-                left: `-10%`,
-                animationDuration: `${Math.random() * 6 + 8}s`,
-                animationDelay: `${Math.random() * 10}s`
-              }}
-            ></div>
-          ))}
-        </div>
-
         <motion.div 
           className="home-content"
           variants={containerVariants}
