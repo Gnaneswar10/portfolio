@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import PageTransition from '../components/PageTransition';
 import { FaGraduationCap, FaSeedling, FaCodeBranch } from 'react-icons/fa';
