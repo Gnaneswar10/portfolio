@@ -1,10 +1,12 @@
 .home-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  min-height: calc(100vh - 80px); /* Fill the screen after navbar */
-  gap: 8rem;
-  padding-top: 2rem;
+  justify-content: space-around;
+  min-height: calc(100vh - 120px);
+  gap: 2rem;
+  max-width: 1700px !important;
+  margin: 0 auto;
+  padding: 4rem 2rem;
   position: relative;
 }
 
@@ -37,10 +39,11 @@
 }
 
 .name {
-  font-size: 4.5rem;
-  line-height: 1.2;
+  font-size: 6rem;
+  line-height: 1.1;
   margin-bottom: 2rem;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -2px;
 }
 
 .title {
@@ -56,10 +59,11 @@
 }
 
 .bio {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   line-height: 1.8;
   color: var(--text-muted);
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
+  max-width: 650px;
 }
 
 .cta-group {
@@ -79,8 +83,10 @@
 
 .image-wrapper {
   position: relative;
-  width: 420px;
-  height: 420px;
+  width: 480px;
+  height: 480px;
+  box-shadow: 0 0 100px rgba(99, 102, 241, 0.2);
+  border-radius: 50%;
 }
 
 .profile-image {
