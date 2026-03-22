@@ -14,7 +14,7 @@ function Projects() {
         'Revealed key seasonal purchasing patterns, empowering stakeholders to aggressively optimize inventory restocks.'
       ],
       tools: ['Power BI', 'DAX', 'Excel'],
-      githubLink: 'https://github.com'
+      githubLink: 'https://github.com/Gnaneswar10/PowerBI_Report_Retail_Analytics'
     },
     {
       title: 'Diabetes Prediction System',
@@ -24,7 +24,7 @@ function Projects() {
         'Developed an interactive dashboard enabling medical practitioners to instantly input live patient data and evaluate risk probabilities.'
       ],
       tools: ['Python', 'Pandas', 'Scikit-learn', 'Streamlit'],
-      githubLink: 'https://github.com'
+      githubLink: 'https://github.com/Gnaneswar10/Predictive_Analytics_Diabetes'
     },
     {
       title: 'SwiftCart – E-Commerce Web App',
