@@ -2,11 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 120px);
-  gap: 4rem;
-  max-width: 1640px !important;
+  min-height: 100vh;
+  gap: 2rem;
+  max-width: 1800px !important;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 0 5%;
   position: relative;
 }
 
@@ -25,24 +25,24 @@
 
 .home-content {
   flex: 1;
-  max-width: 750px;
+  max-width: 900px;
   position: relative;
   z-index: 1;
 }
 
 .greeting {
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
   color: var(--text-color);
 }
 
 .name {
-  font-size: 5.5rem;
-  line-height: 1.1;
-  margin-bottom: 2rem;
+  font-size: 9rem;
+  line-height: 1.0;
+  margin-bottom: 2.5rem;
   font-weight: 800;
-  letter-spacing: -2px;
+  letter-spacing: -4px;
 }
 
 .title {
@@ -58,11 +58,11 @@
 }
 
 .bio {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   line-height: 1.8;
   color: var(--text-muted);
-  margin-bottom: 3.5rem;
-  max-width: 650px;
+  margin-bottom: 4rem;
+  max-width: 700px;
 }
 
 .home-cta {
@@ -87,9 +87,9 @@
 
 .image-wrapper {
   position: relative;
-  width: 460px;
-  height: 460px;
-  box-shadow: 0 0 100px rgba(99, 102, 241, 0.2);
+  width: 600px;
+  height: 600px;
+  box-shadow: 0 0 120px rgba(99, 102, 241, 0.25);
   border-radius: 50%;
 }
 
