@@ -40,14 +40,11 @@ function Home() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="home-badge">
-            <span className="badge-dot"></span>
-            Available for new projects
-          </div>
-          <h1 className="home-title">
-            Hello, I'm <br />
-            <span className="gradient-text">Gnaneswar Raju</span>
-          </h1>
+          <div className="home-content-inner">
+            <h1 className="name">
+              Hello, I'm <br />
+              <span className="gradient-text">Gnaneswar Raju</span>
+            </h1>
             <h2 className="home-subtitle" style={{ lineHeight: 1.6 }}>
               <TypeAnimation
                 sequence={[

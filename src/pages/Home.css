@@ -3,8 +3,8 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  gap: 2rem;
-  max-width: 1800px !important;
+  gap: 3rem;
+  max-width: 1600px !important;
   margin: 0 auto;
   padding: 0 5%;
   position: relative;
@@ -24,8 +24,8 @@
 
 
 .home-content {
-  flex: 1;
-  max-width: 900px;
+  flex: 1.5;
+  max-width: 1000px;
   position: relative;
   z-index: 1;
 }
@@ -38,11 +38,11 @@
 }
 
 .name {
-  font-size: 9rem;
+  font-size: 8rem;
   line-height: 1.0;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   font-weight: 800;
-  letter-spacing: -4px;
+  letter-spacing: -3px;
 }
 
 .title {
@@ -58,11 +58,11 @@
 }
 
 .bio {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   line-height: 1.8;
   color: var(--text-muted);
-  margin-bottom: 4rem;
-  max-width: 700px;
+  margin-bottom: 3.5rem;
+  max-width: 800px;
 }
 
 .home-cta {
@@ -87,9 +87,9 @@
 
 .image-wrapper {
   position: relative;
-  width: 600px;
-  height: 600px;
-  box-shadow: 0 0 120px rgba(99, 102, 241, 0.25);
+  width: 440px;
+  height: 440px;
+  box-shadow: 0 0 80px rgba(99, 102, 241, 0.15);
   border-radius: 50%;
 }
 
