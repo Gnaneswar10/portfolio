@@ -4,19 +4,47 @@
   gap: 2rem;
 }
 
-.cert-card {
+.cert-card-container {
+  perspective: 1200px;
+  display: block;
+}
+
+.cert-card-inner {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.cert-card-container:hover .cert-card-inner {
+  transform: rotateY(180deg);
+}
+
+.cert-card-front, .cert-card-back {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 2rem 1.5rem;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  height: 100%;
+  box-sizing: border-box;
+  /* Enforce inherited glass-card rounded corners */
+  border-radius: 20px; 
 }
 
-.cert-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(99, 102, 241, 0.2);
+.cert-card-front {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+.cert-card-back {
+  transform: rotateY(180deg);
+  justify-content: center;
 }
 
 .cert-icon-wrapper {
