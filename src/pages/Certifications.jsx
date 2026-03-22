@@ -59,27 +59,19 @@ function Certifications() {
         >
           {certs.map((cert, index) => (
             <motion.div key={index} className="cert-card-container" variants={itemVariants}>
-              <div className="cert-card-inner">
-                {/* Front Side */}
-                <div className="cert-card-front glass-card">
-                  <div className="cert-front-banner"></div>
-                  <div className="cert-front-content">
-                    <div className="cert-icon-wrapper">
-                      <FaCertificate className="cert-main-icon" />
-                    </div>
-                    <h3 className="cert-title">{cert.title}</h3>
-                    <p className="cert-issuer">{cert.issuer}</p>
-                    <span className="cert-hover-hint">Hover to view</span>
+              <div className="cert-card-inner glass-card">
+                <div className="cert-front-banner"></div>
+                <div className="cert-front-content">
+                  <div className="cert-icon-wrapper">
+                    <FaCertificate className="cert-main-icon" />
                   </div>
-                </div>
-                
-                {/* Back Side */}
-                <div className="cert-card-back glass-card">
-                  <h3 className="cert-title" style={{ marginBottom: '1.5rem' }}>{cert.title}</h3>
-                  <div className="cert-action">
+                  <h3 className="cert-title">{cert.title}</h3>
+                  <p className="cert-issuer">{cert.issuer}</p>
+                  
+                  <div className="cert-action" style={{ marginTop: 'auto', width: '100%', paddingTop: '1rem' }}>
                     <Button 
                       variant="outline" 
-                      style={{ width: '100%', padding: '0.5rem 1rem' }}
+                      style={{ width: '100%', padding: '0.6rem 1rem' }}
                       onClick={() => window.open(cert.link, '_blank', 'noopener,noreferrer')}
                     >
                       View Certificate
