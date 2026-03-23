@@ -1,5 +1,4 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import Button from '../components/Button';
 import { FaPaperPlane, FaBriefcase, FaFileDownload, FaGithub, FaLinkedin, FaEnvelope, FaChevronDown, FaChartBar, FaFileExcel } from 'react-icons/fa';
 import { SiOpenjdk, SiPython, SiMysql, SiDjango } from 'react-icons/si';
@@ -23,8 +22,6 @@ const techStack = [
 ];
 
 function Home() {
-  const navigate = useNavigate();
-
   return (
     <>
       <div className="page-wrapper container home-container">
@@ -81,13 +78,13 @@ function Home() {
 
           {/* ── CTA Buttons ── */}
           <div className="home-cta">
-            <Button size="lg" onClick={() => navigate('/projects')}>
+            <Button size="lg" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
               <FaBriefcase style={{ marginRight: '0.5rem' }} /> Projects
             </Button>
-            <Button size="lg" onClick={() => navigate('/resume')}>
+            <Button size="lg" onClick={() => document.getElementById('resume')?.scrollIntoView({ behavior: 'smooth' })}>
               <FaFileDownload style={{ marginRight: '0.5rem' }} /> Resume
             </Button>
-            <Button size="lg" onClick={() => navigate('/contact')}>
+            <Button size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
               <FaPaperPlane style={{ marginRight: '0.5rem' }} /> Contact
             </Button>
           </div>
