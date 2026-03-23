@@ -1,0 +1,273 @@
+/* ===== PLANET SECTION DECORATIONS ===== */
+/* All planets: absolutely positioned, pointer-events none, decorative only */
+
+.planet-wrap {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  overflow: visible;
+}
+
+.planet-sphere {
+  border-radius: 50%;
+  position: relative;
+}
+
+/* ─────────────────────────────
+   ☀️  SUN — Home
+   Warm amber radial, top-right
+───────────────────────────── */
+.planet-sun {
+  top: 5%;
+  right: -120px;
+}
+.planet-sun .planet-sphere {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle at 38% 38%,
+    #fffbeb 0%,
+    #fde68a 20%,
+    #f59e0b 45%,
+    #d97706 65%,
+    #92400e 85%,
+    transparent 100%
+  );
+  opacity: 0.13;
+  filter: blur(2px);
+  box-shadow: 0 0 80px 30px rgba(251, 191, 36, 0.08);
+  animation: planet-pulse 8s ease-in-out infinite alternate;
+}
+
+/* ─────────────────────────────
+   🌍  EARTH — About
+   Blue-green, bottom-right
+───────────────────────────── */
+.planet-earth {
+  bottom: 5%;
+  right: -80px;
+}
+.planet-earth .planet-sphere {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle at 35% 35%,
+    #bfdbfe 0%,
+    #3b82f6 25%,
+    #1d4ed8 50%,
+    #1e3a8a 72%,
+    #172554 90%,
+    transparent 100%
+  );
+  opacity: 0.14;
+  filter: blur(1.5px);
+  box-shadow: 0 0 60px 20px rgba(59, 130, 246, 0.07);
+  animation: planet-slow-spin 60s linear infinite;
+}
+
+/* ─────────────────────────────
+   🪐  SATURN — Projects
+   Golden sphere with ring, top-right
+───────────────────────────── */
+.planet-saturn {
+  top: 8%;
+  right: -60px;
+}
+.planet-saturn .planet-sphere {
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle at 38% 32%,
+    #fef9c3 0%,
+    #fde68a 22%,
+    #f59e0b 48%,
+    #b45309 72%,
+    #78350f 90%,
+    transparent 100%
+  );
+  opacity: 0.15;
+  filter: blur(1px);
+  box-shadow: 0 0 50px 16px rgba(245, 158, 11, 0.07);
+  animation: planet-pulse 12s ease-in-out infinite alternate;
+}
+
+.saturn-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 420px;
+  height: 80px;
+  border: 10px solid rgba(251, 191, 36, 0.22);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotateX(72deg);
+  pointer-events: none;
+  filter: blur(1px);
+}
+
+/* ─────────────────────────────
+   🔴  MARS — Skills
+   Red-orange, bottom-left
+───────────────────────────── */
+.planet-mars {
+  bottom: 8%;
+  left: -80px;
+}
+.planet-mars .planet-sphere {
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle at 38% 35%,
+    #fecaca 0%,
+    #f87171 20%,
+    #ef4444 42%,
+    #b91c1c 65%,
+    #7f1d1d 85%,
+    transparent 100%
+  );
+  opacity: 0.13;
+  filter: blur(1.5px);
+  box-shadow: 0 0 50px 16px rgba(239, 68, 68, 0.06);
+  animation: planet-pulse 10s ease-in-out infinite alternate-reverse;
+}
+
+/* ─────────────────────────────
+   🌠  COMET — Training
+   Bright head with fading tail, top-left
+───────────────────────────── */
+.planet-comet {
+  top: 6%;
+  left: -40px;
+}
+.planet-comet .planet-sphere {
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at 35% 35%,
+    #ffffff 0%,
+    #e0e7ff 20%,
+    #6366f1 50%,
+    #4338ca 75%,
+    transparent 100%
+  );
+  opacity: 0.18;
+  filter: blur(1px);
+  animation: planet-pulse 6s ease-in-out infinite alternate;
+}
+.comet-tail {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 280px;
+  height: 2px;
+  background: linear-gradient(to right, rgba(99, 102, 241, 0.25), transparent);
+  transform: translateY(-50%) rotate(-10deg);
+  transform-origin: left center;
+  filter: blur(3px);
+}
+
+/* ─────────────────────────────
+   🌙  MOON — Certifications
+   Silver-grey, top-right
+───────────────────────────── */
+.planet-moon {
+  top: 6%;
+  right: -50px;
+}
+.planet-moon .planet-sphere {
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle at 35% 32%,
+    #f9fafb 0%,
+    #e5e7eb 25%,
+    #9ca3af 55%,
+    #4b5563 78%,
+    #1f2937 92%,
+    transparent 100%
+  );
+  opacity: 0.14;
+  filter: blur(1px);
+  box-shadow: 0 0 40px 12px rgba(156, 163, 175, 0.06);
+  animation: planet-pulse 14s ease-in-out infinite alternate;
+}
+
+/* ─────────────────────────────
+   ⭐  STAR — Achievements
+   Glowing star burst, bottom-right
+───────────────────────────── */
+.planet-star {
+  bottom: 5%;
+  right: -60px;
+}
+.planet-star .planet-sphere {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle at 50% 50%,
+    #ffffff 0%,
+    #fef9c3 15%,
+    #fde68a 35%,
+    #f59e0b 55%,
+    transparent 75%
+  );
+  opacity: 0.14;
+  filter: blur(2px);
+  animation: star-glow 5s ease-in-out infinite alternate;
+}
+.star-flare-1,
+.star-flare-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  height: 2px;
+  background: linear-gradient(to right,
+    transparent,
+    rgba(251, 191, 36, 0.18),
+    transparent
+  );
+  transform-origin: center;
+  filter: blur(2px);
+  opacity: 0.6;
+}
+.star-flare-1 { transform: translate(-50%, -50%) rotate(0deg); }
+.star-flare-2 { transform: translate(-50%, -50%) rotate(60deg); }
+
+/* ─────────────────────────────
+   🌌  NEBULA — Contact
+   Deep purple/teal swirl, top-right
+───────────────────────────── */
+.planet-nebula {
+  top: 0;
+  right: -100px;
+}
+.planet-nebula .planet-sphere {
+  width: 420px;
+  height: 420px;
+  background:
+    radial-gradient(circle at 30% 40%,  rgba(99,  102, 241, 0.18) 0%, transparent 55%),
+    radial-gradient(circle at 70% 60%,  rgba(168,  85, 247, 0.14) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%,  rgba( 20, 184, 166, 0.08) 0%, transparent 60%);
+  border-radius: 50%;
+  opacity: 1;
+  filter: blur(30px);
+  animation: nebula-drift 15s ease-in-out infinite alternate;
+}
+
+/* ─────────────────────────────
+   ANIMATIONS
+───────────────────────────── */
+@keyframes planet-pulse {
+  0%   { transform: scale(1);    opacity: 0.13; }
+  100% { transform: scale(1.06); opacity: 0.18; }
+}
+@keyframes planet-slow-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes star-glow {
+  0%   { transform: scale(1)    rotate(0deg);   opacity: 0.12; }
+  100% { transform: scale(1.12) rotate(45deg);  opacity: 0.18; }
+}
+@keyframes nebula-drift {
+  0%   { transform: scale(1)    rotate(0deg); }
+  100% { transform: scale(1.08) rotate(15deg); }
+}
+
+/* ─── Hide planets on small screens ─── */
+@media (max-width: 900px) {
+  .planet-wrap { display: none; }
+}
