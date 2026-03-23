@@ -34,7 +34,7 @@ function Projects() {
         'Enhanced OS conceptual learning by providing side-by-side real-time visual comparisons of different scheduling strategies.'
       ],
       tools: ['JavaScript', 'HTML5', 'CSS3', 'Bootstrap', 'C++'],
-      githubLink: 'https://github.com/Gnaneswar10/Intelligent_CPU_Scheduler'
+      githubLink: 'https://github.com/Gnaneswar10/Intelligent_CPU_scheduler'
     }
   ];
 
