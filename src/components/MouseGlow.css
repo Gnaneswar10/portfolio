@@ -1,22 +1,63 @@
-.mouse-glow {
+/* ===== CUSTOM MAGNETIC CURSOR ===== */
+
+/* Hide the native OS cursor everywhere */
+*, *::before, *::after {
+  cursor: none !important;
+}
+
+/* ── Center dot: snaps instantly ── */
+.cursor-dot {
   position: fixed;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.05) 40%, transparent 70%);
+  width: 8px;
+  height: 8px;
+  background: #a855f7;
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  z-index: -1; /* Above starfield, below content */
-  transition: width 0.3s ease, height 0.3s ease;
-  filter: blur(80px);
+  z-index: 99999;
+  transition: transform 0.15s ease, background 0.2s ease, width 0.2s ease, height 0.2s ease;
+  box-shadow: 0 0 8px rgba(168, 85, 247, 0.8);
 }
 
-html.dark .mouse-glow {
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, rgba(168, 85, 247, 0.03) 45%, transparent 70%);
+.cursor-dot--hover {
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
 }
 
-@media (max-width: 900px) {
-  .mouse-glow {
-    display: none; /* Disable on mobile for performance and lack of hover */
+/* ── Trailing ring: spring-lerps behind ── */
+.cursor-ring {
+  position: fixed;
+  width: 38px;
+  height: 38px;
+  border: 2px solid rgba(99, 102, 241, 0.7);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 99998;
+  transition: width 0.3s ease, height 0.3s ease,
+              border-color 0.3s ease, background 0.3s ease,
+              border-width 0.3s ease;
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.2);
+}
+
+.cursor-ring--hover {
+  width: 56px;
+  height: 56px;
+  border-color: rgba(168, 85, 247, 0.9);
+  background: rgba(99, 102, 241, 0.08);
+  border-width: 2px;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.35);
+}
+
+/* ── Hide on touch/mobile devices ── */
+@media (hover: none) and (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+  *, *::before, *::after {
+    cursor: auto !important;
   }
 }
