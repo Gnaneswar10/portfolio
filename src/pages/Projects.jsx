@@ -26,14 +26,15 @@ function Projects() {
       githubLink: 'https://github.com/Gnaneswar10/Predictive_Analytics_Diabetes'
     },
     {
-      title: 'SwiftCart – E-Commerce Web App',
-      problemStatement: 'A modern e-commerce deployment required a scalable, secure, and lightning-fast backend REST architecture to flawlessly handle high-volume data flows across product inventories and user endpoint queries.',
+      title: 'Intelligent CPU Scheduler',
+      problemStatement: 'Understanding complex Operating System scheduling algorithms like FCFS, SJF, and Round Robin can be difficult through theory alone; students need a visual, interactive way to compare their real-time performance.',
       insights: [
-        'Engineered a tailored backend routing network that drastically optimized database fetch speeds and response times.',
-        'Established impenetrable, secure RESTful APIs seamlessly bridging the frontend rendering systems with backend SQL datastores.'
+        'Developed an interactive simulator to visually demonstrate key CPU scheduling algorithms (FCFS, SJF, Round Robin, Priority Scheduling).',
+        'Used algorithmic techniques and real-time visualizations to allow users to compare performance metrics like waiting time and turnaround time dynamically.',
+        'Enhanced OS conceptual learning by providing side-by-side real-time visual comparisons of different scheduling strategies.'
       ],
-      tools: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'REST APIs', 'Tailwind CSS'],
-      githubLink: 'https://github.com/Gnaneswar10/swiftcart'
+      tools: ['JavaScript', 'HTML5', 'CSS3', 'Bootstrap', 'C++'],
+      githubLink: 'https://github.com/Gnaneswar10/Intelligent_CPU_Scheduler'
     }
   ];
 
