@@ -1,25 +1,38 @@
 import React from 'react';
-import { FaGithub, FaExternalLinkAlt, FaChartLine, FaTools } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaChartLine, FaTools, FaLightbulb } from 'react-icons/fa';
 import './ProjectCard.css';
 
-function ProjectCard({ title, problemStatement, insights, tools, githubLink, liveLink }) {
+// One accent colour per project index
+const ACCENTS = ['#22d3ee', '#a855f7', '#f59e0b'];
+
+function ProjectCard({ title, problemStatement, insights, tools, githubLink, liveLink, index = 0 }) {
+  const accent = ACCENTS[index % ACCENTS.length];
+
   return (
     <div className="project-card glass-card">
+      {/* Coloured top accent bar */}
+      <div className="project-accent-bar" style={{ background: accent }} />
+
       <div className="project-header">
+        <div className="project-accent-dot" style={{ background: accent }} />
         <h3 className="project-title">{title}</h3>
       </div>
-      
+
       <div className="project-body">
         <div className="project-section">
-          <h4 className="section-heading">Problem Statement</h4>
+          <h4 className="section-heading">
+            <FaLightbulb className="section-icon problem-icon" /> Problem Statement
+          </h4>
           <p className="section-text">{problemStatement}</p>
         </div>
 
         <div className="project-section">
-          <h4 className="section-heading"><FaChartLine className="section-icon insight-icon" /> Core Insights</h4>
+          <h4 className="section-heading">
+            <FaChartLine className="section-icon insight-icon" /> Core Insights
+          </h4>
           <ul className="insights-list">
-            {insights?.map((insight, index) => (
-              <li key={index}>{insight}</li>
+            {insights?.map((insight, i) => (
+              <li key={i}>{insight}</li>
             ))}
           </ul>
         </div>
@@ -27,23 +40,37 @@ function ProjectCard({ title, problemStatement, insights, tools, githubLink, liv
 
       <div className="project-footer">
         <div className="project-section">
-          <h4 className="section-heading" style={{ fontSize: '0.9rem', marginBottom: '0.25rem' }}><FaTools className="section-icon text-muted" /> Tools Used</h4>
+          <h4 className="section-heading" style={{ fontSize: '0.85rem', marginBottom: '0.4rem' }}>
+            <FaTools className="section-icon text-muted" /> Tools Used
+          </h4>
           <div className="project-tools">
-            {tools?.map((tool, index) => (
-              <span key={index} className="tool-badge">{tool}</span>
+            {tools?.map((tool, i) => (
+              <span key={i} className="tool-badge">{tool}</span>
             ))}
           </div>
         </div>
-        
+
         <div className="project-links">
           {githubLink && (
-            <a href={githubLink} target="_blank" rel="noopener noreferrer" className="project-link btn btn-outline" style={{ padding: '0.4rem 0.8rem', fontSize: '0.9rem' }}>
-              <FaGithub /> GitHub
+            <a
+              href={githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-gh-btn"
+              style={{ borderColor: accent, color: accent }}
+            >
+              <FaGithub /> View on GitHub
             </a>
           )}
           {liveLink && (
-            <a href={liveLink} target="_blank" rel="noopener noreferrer" className="project-link btn btn-primary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.9rem' }}>
-              <FaExternalLinkAlt /> Live
+            <a
+              href={liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-live-btn"
+              style={{ background: accent }}
+            >
+              <FaExternalLinkAlt /> Live Demo
             </a>
           )}
         </div>

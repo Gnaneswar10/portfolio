@@ -2,20 +2,42 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 1.5rem;
+  padding: 1.75rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-accent-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  opacity: 0.8;
 }
 
 .project-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   border-bottom: 1px solid var(--card-border);
-  padding-bottom: 1rem;
-  margin-bottom: 1.25rem;
+}
+
+.project-accent-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px currentColor;
 }
 
 .project-title {
-  font-size: 1.35rem;
-  font-weight: 600;
+  font-size: 1.4rem;
+  font-weight: 700;
   color: var(--text-color);
-  line-height: 1.4;
+  line-height: 1.3;
   margin: 0;
 }
 
@@ -23,49 +45,41 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
+  gap: 1.75rem;
+  margin-bottom: 2rem;
 }
 
 .project-section {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .section-heading {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.95rem;
-  font-weight: 600;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 700;
   color: var(--text-color);
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
+  opacity: 0.9;
 }
 
 .section-icon {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
-.problem-icon {
-  color: #ef4444;
-}
-
-.insight-icon {
-  color: #10b981;
-}
-
-.text-muted {
-  color: var(--text-muted);
-}
+.problem-icon { color: #22d3ee; }
+.insight-icon { color: #a855f7; }
 
 .section-text {
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 0.95rem;
+  line-height: 1.7;
   color: var(--text-color);
-  opacity: 0.85;
+  opacity: 0.8;
   margin: 0;
 }
 
@@ -75,52 +89,100 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.75rem;
 }
 
 .insights-list li {
   position: relative;
-  padding-left: 1.25rem;
-  font-size: 0.9rem;
-  line-height: 1.5;
+  padding-left: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
   color: var(--text-color);
   opacity: 0.85;
 }
 
 .insights-list li::before {
-  content: "▹";
+  content: "✦";
   position: absolute;
   left: 0;
   top: 0;
-  color: #6366f1;
-  font-weight: bold;
+  color: #a855f7;
+  font-size: 0.8rem;
 }
 
 .project-footer {
   margin-top: auto;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--card-border);
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 .project-tools {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .tool-badge {
   background: var(--card-border);
   color: var(--text-color);
-  padding: 0.25rem 0.75rem;
-  border-radius: 1rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 2rem;
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tool-badge:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .project-links {
   display: flex;
   gap: 1rem;
+}
+
+.project-gh-btn, .project-live-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-decoration: none;
+}
+
+.project-gh-btn {
+  background: transparent;
+  border: 1.5px solid;
+}
+
+.project-gh-btn:hover {
+  background: white;
+  color: black !important;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.project-live-btn {
+  color: white !important;
+  border: none;
+}
+
+.project-live-btn:hover {
+  filter: brightness(1.2);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 900px) {
+  .project-card { padding: 1.5rem; }
+  .project-title { font-size: 1.25rem; }
+  .project-links { flex-direction: column; }
 }

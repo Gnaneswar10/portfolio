@@ -8,15 +8,16 @@ function SkillBadge({ name, icon, level }) {
       <div className="skill-header">
         <div className="skill-icon">{icon}</div>
         <h4 className="skill-name">{name}</h4>
+        <span className="skill-level">{level}%</span>
       </div>
       <div className="skill-progress-bg">
-        <motion.div 
+        <motion.div
           className="skill-progress-fill"
           initial={{ width: 0 }}
           whileInView={{ width: `${level}%` }}
           viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.2 }}
-        ></motion.div>
+          transition={{ duration: 1.1, delay: 0.2, ease: 'easeOut' }}
+        />
       </div>
     </div>
   );
