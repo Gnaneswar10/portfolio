@@ -2,7 +2,7 @@
 
 .home-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.3fr 0.7fr;
   align-items: center;
   min-height: 100vh;
   max-width: 1600px !important;
@@ -199,8 +199,8 @@
 /* Rotating gradient ring */
 .image-ring {
   position: relative;
-  width: 440px;
-  height: 440px;
+  width: 360px;
+  height: 360px;
   border-radius: 50%;
   padding: 4px;
   background: conic-gradient(from 0deg, #6366f1, #a855f7, #ec4899, #6366f1);
