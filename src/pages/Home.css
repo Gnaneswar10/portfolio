@@ -2,13 +2,13 @@
 
 .home-container {
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   min-height: 100vh;
   max-width: 1600px !important;
   margin: 0 auto;
   padding: 0 4%;
-  gap: 1.5rem;
+  gap: 3rem;
   position: relative;
 }
 
@@ -27,9 +27,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 1.1rem;
+  gap: 1.2rem;
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 /* ─── Greeting ─── */
@@ -44,21 +45,23 @@
 
 /* ─── Name ─── */
 .name {
-  font-size: 4.5rem;
-  line-height: 1.1;
+  font-size: 5rem;
+  line-height: 1.05;
   font-weight: 800;
   letter-spacing: -2px;
   margin: 0;
+  width: 100%;
 }
 
 /* ─── Animated Role ─── */
 .home-subtitle {
-  font-size: 1.9rem;
+  font-size: 2rem;
   font-weight: 600;
   color: var(--primary-color);
   line-height: 1.4;
   min-height: 2.8rem;
   margin: 0;
+  width: 100%;
 }
 
 /* Scramble text styling — monospace for the "data decoding" feel */
@@ -73,11 +76,11 @@
 
 /* ─── Bio ─── */
 .home-description {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 1.15rem;
+  line-height: 1.85;
   color: var(--text-muted);
   margin: 0;
-  max-width: 560px;
+  width: 100%;
 }
 
 /* ─── Tech Stack ─── */
