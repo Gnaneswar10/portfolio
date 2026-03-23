@@ -60,7 +60,7 @@ function Contact() {
             </p>
             
             <div className="info-items">
-              <a href="mailto:gnaneswarraju10@gmail.com" className="info-card">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gnaneswarraju10@gmail.com" target="_blank" rel="noopener noreferrer" className="info-card">
                 <div className="info-icon-wrapper">
                   <FaEnvelope className="info-icon" />
                 </div>
@@ -90,13 +90,13 @@ function Contact() {
             </div>
 
             <div className="contact-socials">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-circle">
+              <a href="https://linkedin.com/in/gnaneswar-raju" target="_blank" rel="noopener noreferrer" className="social-circle">
                 <FaLinkedin />
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-circle">
+              <a href="https://github.com/Gnaneswar10" target="_blank" rel="noopener noreferrer" className="social-circle">
                 <FaGithub />
               </a>
-              <a href="mailto:gnaneswarraju10@gmail.com" className="social-circle">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gnaneswarraju10@gmail.com" target="_blank" rel="noopener noreferrer" className="social-circle">
                 <FaEnvelope />
               </a>
             </div>

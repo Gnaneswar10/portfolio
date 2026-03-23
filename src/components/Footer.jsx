@@ -10,13 +10,13 @@ function Footer() {
       marginTop: 'auto'
     }}>
       <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '1rem' }}>
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer" style={{ fontSize: '1.5rem' }}>
+        <a href="https://github.com/Gnaneswar10" target="_blank" rel="noopener noreferrer" style={{ fontSize: '1.5rem' }}>
           <FaGithub />
         </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style={{ fontSize: '1.5rem' }}>
+        <a href="https://linkedin.com/in/gnaneswar-raju" target="_blank" rel="noopener noreferrer" style={{ fontSize: '1.5rem' }}>
           <FaLinkedin />
         </a>
-        <a href="mailto:gnaneswarraju10@gmail.com" style={{ fontSize: '1.5rem' }}>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gnaneswarraju10@gmail.com" target="_blank" rel="noopener noreferrer" style={{ fontSize: '1.5rem' }}>
           <FaEnvelope />
         </a>
       </div>

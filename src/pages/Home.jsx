@@ -106,7 +106,8 @@ function Home() {
               title="LinkedIn"
             ><FaLinkedin /></motion.a>
             <motion.a
-              href="mailto:gnaneswarraju10@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=gnaneswarraju10@gmail.com"
+              target="_blank" rel="noopener noreferrer"
               className="social-icon"
               whileHover={{ y: -4, scale: 1.15 }}
               title="Email"
