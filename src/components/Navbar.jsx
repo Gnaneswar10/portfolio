@@ -12,6 +12,7 @@ const sections = [
   { name: 'Training',       id: 'training' },
   { name: 'Certifications', id: 'certifications' },
   { name: 'Achievements',   id: 'achievements' },
+  { name: 'Resume',         id: 'resume' },
   { name: 'Contact',        id: 'contact' },
 ];
 
@@ -66,29 +67,6 @@ function Navbar({ theme, toggleTheme, activeId }) {
               </a>
             </li>
           ))}
-
-          {/* Resume — standalone page */}
-          <li style={{ position: 'relative' }}>
-            <NavLink
-              to="/resume"
-              className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
-              onClick={() => setIsOpen(false)}
-            >
-              {({ isActive }) => (
-                <>
-                  <span className="link-text">Resume</span>
-                  {isActive && (
-                    <motion.div
-                      layoutId="nav-pill"
-                      className="nav-active-box"
-                      initial={false}
-                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                    />
-                  )}
-                </>
-              )}
-            </NavLink>
-          </li>
 
           {/* Theme toggle */}
           <li className="theme-toggle-wrapper">

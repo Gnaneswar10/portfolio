@@ -6,6 +6,7 @@ import Projects from './Projects';
 import Training from './Training';
 import Certifications from './Certifications';
 import Achievements from './Achievements';
+import Resume from './Resume';
 import Contact from './Contact';
 import PlanetDecoration from '../components/PlanetDecoration';
 
@@ -47,6 +48,11 @@ function MainPage() {
       <section id="achievements" style={sectionStyle}>
         <PlanetDecoration type="star" />
         <Achievements />
+      </section>
+
+      <section id="resume" style={sectionStyle}>
+        <PlanetDecoration type="pluto" />
+        <Resume />
       </section>
 
       <section id="contact" style={sectionStyle}>

@@ -14,16 +14,14 @@ import { Analytics } from '@vercel/analytics/react';
 // All scrollable section IDs in order
 const SECTIONS = [
   'home','about','skills','projects',
-  'training','certifications','achievements','contact',
+  'training','certifications','achievements','resume','contact',
 ];
 
 function AppContent({ theme, toggleTheme }) {
   const [activeId, setActiveId] = useState('home');
-  const isResumePage = window.location.pathname === '/resume';
 
   // Single source-of-truth IntersectionObserver for both Navbar and DotNav
   useEffect(() => {
-    if (isResumePage) return;
     const observers = [];
     SECTIONS.forEach((id) => {
       const el = document.getElementById(id);
@@ -36,7 +34,7 @@ function AppContent({ theme, toggleTheme }) {
       observers.push(obs);
     });
     return () => observers.forEach(o => o.disconnect());
-  }, [isResumePage]);
+  }, []);
 
   return (
     <div className="app" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
@@ -44,11 +42,10 @@ function AppContent({ theme, toggleTheme }) {
       <Starfield />
       <MouseGlow />
       <Navbar theme={theme} toggleTheme={toggleTheme} activeId={activeId} />
-      {!isResumePage && <DotNav activeId={activeId} />}
+      <DotNav activeId={activeId} />
       <main style={{ flex: 1 }}>
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<MainPage />} />
         </Routes>
       </main>
