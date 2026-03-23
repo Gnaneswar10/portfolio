@@ -2,8 +2,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import PageTransition from '../components/PageTransition';
 import Button from '../components/Button';
-import { FaPaperPlane, FaBriefcase, FaFileDownload, FaGithub, FaLinkedin, FaEnvelope, FaChevronDown } from 'react-icons/fa';
-import { SiJava, SiPython, SiMysql, SiPowerbi, SiDjango, SiMicrosoftexcel } from 'react-icons/si';
+import { FaPaperPlane, FaBriefcase, FaFileDownload, FaGithub, FaLinkedin, FaEnvelope, FaChevronDown, FaChartBar, FaFileExcel } from 'react-icons/fa';
+import { SiOpenjdk, SiPython, SiMysql, SiDjango } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import './Home.css';
@@ -15,12 +15,12 @@ const stats = [
 ];
 
 const techStack = [
-  { icon: SiJava,             label: 'Java' },
-  { icon: SiPython,           label: 'Python' },
-  { icon: SiMysql,            label: 'MySQL' },
-  { icon: SiPowerbi,          label: 'Power BI' },
-  { icon: SiDjango,           label: 'Django' },
-  { icon: SiMicrosoftexcel,   label: 'Excel' },
+  { icon: SiOpenjdk,   label: 'Java' },
+  { icon: SiPython,    label: 'Python' },
+  { icon: SiMysql,     label: 'MySQL' },
+  { icon: FaChartBar,  label: 'Power BI' },
+  { icon: SiDjango,    label: 'Django' },
+  { icon: FaFileExcel, label: 'Excel' },
 ];
 
 function Home() {
