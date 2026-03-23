@@ -7,7 +7,7 @@
   --text-muted: #666666;
   --card-bg: rgba(255, 255, 255, 0.7);
   --card-border: rgba(0, 0, 0, 0.1);
-  --primary-gradient: linear-gradient(135deg, #4f46e5, #9333ea);
+  --primary-gradient: linear-gradient(135deg, #22d3ee, #a855f7);
   --nav-bg: rgba(255, 255, 255, 0.85);
 
   /* Effects */
@@ -21,7 +21,7 @@ html.dark {
   --text-muted: #9ca3af;
   --card-bg: rgba(30, 30, 30, 0.6);
   --card-border: rgba(255, 255, 255, 0.1);
-  --primary-gradient: linear-gradient(135deg, #6366f1, #a855f7);
+  --primary-gradient: linear-gradient(135deg, #22d3ee, #a855f7);
   --nav-bg: rgba(18, 18, 18, 0.85);
 
   /* Effects */
