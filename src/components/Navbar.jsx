@@ -1,48 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import './Navbar.css';
 
 const sections = [
-  { name: 'Home',          id: 'home' },
-  { name: 'About',         id: 'about' },
-  { name: 'Skills',        id: 'skills' },
-  { name: 'Projects',      id: 'projects' },
-  { name: 'Training',      id: 'training' },
-  { name: 'Certifications',id: 'certifications' },
-  { name: 'Achievements',  id: 'achievements' },
-  { name: 'Contact',       id: 'contact' },
+  { name: 'Home',           id: 'home' },
+  { name: 'About',          id: 'about' },
+  { name: 'Skills',         id: 'skills' },
+  { name: 'Projects',       id: 'projects' },
+  { name: 'Training',       id: 'training' },
+  { name: 'Certifications', id: 'certifications' },
+  { name: 'Achievements',   id: 'achievements' },
+  { name: 'Contact',        id: 'contact' },
 ];
 
-function Navbar({ theme, toggleTheme }) {
-  const [isOpen, setIsOpen]         = useState(false);
-  const [activeId, setActiveId]     = useState('home');
-  const [isResumePage, setIsResumePage] = useState(false);
-
-  // Detect if we're on the /resume standalone page
-  useEffect(() => {
-    setIsResumePage(window.location.pathname === '/resume');
-  }, []);
-
-  // IntersectionObserver: highlight the section currently in view
-  useEffect(() => {
-    if (isResumePage) return;
-    const observers = [];
-
-    sections.forEach(({ id }) => {
-      const el = document.getElementById(id);
-      if (!el) return;
-      const obs = new IntersectionObserver(
-        ([entry]) => { if (entry.isIntersecting) setActiveId(id); },
-        { rootMargin: '-40% 0px -55% 0px' }
-      );
-      obs.observe(el);
-      observers.push(obs);
-    });
-
-    return () => observers.forEach(o => o.disconnect());
-  }, [isResumePage]);
+function Navbar({ theme, toggleTheme, activeId }) {
+  const [isOpen, setIsOpen] = useState(false);
 
   const scrollTo = (id) => {
     const el = document.getElementById(id);
@@ -93,7 +67,7 @@ function Navbar({ theme, toggleTheme }) {
             </li>
           ))}
 
-          {/* Resume — opens as separate page */}
+          {/* Resume — standalone page */}
           <li style={{ position: 'relative' }}>
             <NavLink
               to="/resume"

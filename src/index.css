@@ -128,6 +128,25 @@ ul {
   min-height: calc(100vh - 80px); /* 80px for navbar approx */
 }
 
+/* ── Scroll offset fix: scroll lands BELOW the fixed 80px navbar ── */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* ── Alternating section tints for visual rhythm ── */
+section#about,
+section#projects,
+section#achievements {
+  background: rgba(99, 102, 241, 0.025);
+}
+
+section#skills,
+section#training,
+section#certifications,
+section#contact {
+  background: transparent;
+}
+
 @media (max-width: 900px) {
   .glass-card {
     padding: 0.85rem;
