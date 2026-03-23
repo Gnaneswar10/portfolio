@@ -26,7 +26,7 @@ function Projects() {
       githubLink: 'https://github.com/Gnaneswar10/Predictive_Analytics_Diabetes'
     },
     {
-      title: 'Intelligent CPU Scheduler',
+      title: 'Intelligent CPU Scheduler – Scheduling the CP',
       problemStatement: 'Understanding complex Operating System scheduling algorithms like FCFS, SJF, and Round Robin can be difficult through theory alone; students need a visual, interactive way to compare their real-time performance.',
       insights: [
         'Developed an interactive simulator to visually demonstrate key CPU scheduling algorithms (FCFS, SJF, Round Robin, Priority Scheduling).',
