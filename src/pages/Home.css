@@ -61,6 +61,16 @@
   margin: 0;
 }
 
+/* Scramble text styling — monospace for the "data decoding" feel */
+.scramble-phrase {
+  font-family: 'Courier New', 'Courier', monospace;
+  background: linear-gradient(135deg, #22d3ee, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.02em;
+}
+
 /* ─── Bio ─── */
 .home-description {
   font-size: 1.1rem;

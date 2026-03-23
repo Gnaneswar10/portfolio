@@ -4,7 +4,7 @@ import Button from '../components/Button';
 import { FaPaperPlane, FaBriefcase, FaFileDownload, FaGithub, FaLinkedin, FaEnvelope, FaChevronDown, FaChartBar, FaFileExcel } from 'react-icons/fa';
 import { SiOpenjdk, SiPython, SiMysql, SiDjango } from 'react-icons/si';
 import { motion } from 'framer-motion';
-import { TypeAnimation } from 'react-type-animation';
+import ScrambleText from '../components/ScrambleText';
 import './Home.css';
 
 const stats = [
@@ -45,16 +45,15 @@ function Home() {
 
           {/* Animated Role */}
           <h2 className="home-subtitle">
-            <TypeAnimation
-              sequence={[
-                'Aspiring Data Analyst',     2000,
-                'Turning Data into Insights', 2000,
-                'ML & Software Developer',   2000,
+            <ScrambleText
+              phrases={[
+                'Aspiring Data Analyst',
+                'Turning Data into Insights',
+                'ML & Software Developer',
               ]}
-              wrapper="span"
-              cursor={true}
-              repeat={Infinity}
-              style={{ lineHeight: 1.4 }}
+              className="scramble-phrase"
+              scrambleDuration={900}
+              holdDuration={2200}
             />
           </h2>
 
