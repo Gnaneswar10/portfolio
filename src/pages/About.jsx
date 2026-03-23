@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import PageTransition from '../components/PageTransition';
 import { FaGraduationCap, FaSeedling, FaCodeBranch } from 'react-icons/fa';
 import './About.css';
 
@@ -19,8 +18,7 @@ function About() {
   };
 
   return (
-    <PageTransition>
-      <div className="page-wrapper container section-padding about-page">
+    <div className="page-wrapper container section-padding about-page">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -88,8 +86,7 @@ function About() {
             </motion.div>
           </motion.div>
         </div>
-      </div>
-    </PageTransition>
+    </div>
   );
 }
 

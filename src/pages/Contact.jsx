@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import PageTransition from '../components/PageTransition';
 import Button from '../components/Button';
 import { FaEnvelope, FaLinkedin, FaGithub, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 import './Contact.css';
@@ -34,8 +33,7 @@ function Contact() {
   };
 
   return (
-    <PageTransition>
-      <div className="page-wrapper container section-padding contact-page">
+    <div className="page-wrapper container section-padding contact-page">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -139,8 +137,7 @@ function Contact() {
             </form>
           </motion.div>
         </div>
-      </div>
-    </PageTransition>
+    </div>
   );
 }
 

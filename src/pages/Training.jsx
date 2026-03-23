@@ -1,5 +1,4 @@
 import React from 'react';
-import PageTransition from '../components/PageTransition';
 import { FaLaptopCode, FaCheckCircle, FaBriefcase, FaCloud } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import './Training.css';
@@ -45,8 +44,7 @@ function Training() {
   };
 
   return (
-    <PageTransition>
-      <div className="page-wrapper container section-padding">
+    <div className="page-wrapper container section-padding">
         <h2 className="section-title gradient-text">Experience & Training</h2>
         <p className="section-subtitle">
           Professional internships, training, and continuous learning that enhanced my practical skills.
@@ -88,8 +86,7 @@ function Training() {
             </motion.div>
           ))}
         </motion.div>
-      </div>
-    </PageTransition>
+    </div>
   );
 }
 

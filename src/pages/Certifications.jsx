@@ -1,5 +1,4 @@
 import React from 'react';
-import PageTransition from '../components/PageTransition';
 import { FaCertificate, FaExternalLinkAlt, FaCalendarAlt, FaBuilding } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import './Certifications.css';
@@ -51,8 +50,7 @@ function Certifications() {
   };
 
   return (
-    <PageTransition>
-      <div className="page-wrapper container section-padding">
+    <div className="page-wrapper container section-padding">
         <h2 className="section-title gradient-text">Certifications</h2>
         <p className="section-subtitle">
           Hover over a card to see the details — click to view the certificate.
@@ -114,8 +112,7 @@ function Certifications() {
             </motion.div>
           ))}
         </motion.div>
-      </div>
-    </PageTransition>
+    </div>
   );
 }
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import PageTransition from '../components/PageTransition';
 import Button from '../components/Button';
 import { FaPaperPlane, FaBriefcase, FaFileDownload, FaGithub, FaLinkedin, FaEnvelope, FaChevronDown, FaChartBar, FaFileExcel } from 'react-icons/fa';
 import { SiOpenjdk, SiPython, SiMysql, SiDjango } from 'react-icons/si';
@@ -27,7 +26,7 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <PageTransition>
+    <>
       <div className="page-wrapper container home-container">
 
         {/* ── LEFT: Text Content ── */}
@@ -160,7 +159,7 @@ function Home() {
         <FaChevronDown />
       </motion.div>
 
-    </PageTransition>
+    </>
   );
 }
 

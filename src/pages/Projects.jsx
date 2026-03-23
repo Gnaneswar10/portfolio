@@ -1,5 +1,4 @@
 import React from 'react';
-import PageTransition from '../components/PageTransition';
 import ProjectCard from '../components/ProjectCard';
 import { motion } from 'framer-motion';
 import './Projects.css';
@@ -39,8 +38,7 @@ function Projects() {
   ];
 
   return (
-    <PageTransition>
-      <div className="page-wrapper container section-padding">
+    <div className="page-wrapper container section-padding">
         <h2 className="section-title gradient-text">Featured Projects</h2>
         <p className="section-subtitle">
           Showcasing my work in data analytics, machine learning, and software development.
@@ -71,8 +69,7 @@ function Projects() {
             </motion.div>
           ))}
         </motion.div>
-      </div>
-    </PageTransition>
+    </div>
   );
 }
 

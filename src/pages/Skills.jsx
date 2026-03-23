@@ -1,5 +1,4 @@
 import React from 'react';
-import PageTransition from '../components/PageTransition';
 import SkillBadge from '../components/SkillBadge';
 import { 
   FaPython, FaJava, FaCode, FaHtml5, FaCss3Alt, 
@@ -55,8 +54,7 @@ function Skills() {
   };
 
   return (
-    <PageTransition>
-      <div className="page-wrapper container section-padding">
+    <div className="page-wrapper container section-padding">
         <h2 className="section-title gradient-text">My Skills</h2>
         <p className="section-subtitle">
           A combination of technical expertise, data analytics proficiency, and essential soft skills.
@@ -96,8 +94,7 @@ function Skills() {
             </motion.div>
           </div>
         </div>
-      </div>
-    </PageTransition>
+    </div>
   );
 }
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import PageTransition from '../components/PageTransition';
 import { FaTrophy, FaStar } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import './Achievements.css';
@@ -27,8 +26,7 @@ function Achievements() {
   };
 
   return (
-    <PageTransition>
-      <div className="page-wrapper container section-padding">
+    <div className="page-wrapper container section-padding">
         <div className="achievements-header text-center">
           <FaTrophy className="header-icon" />
           <h2 className="section-title gradient-text">Key Achievements</h2>
@@ -53,8 +51,7 @@ function Achievements() {
             </motion.div>
           ))}
         </motion.div>
-      </div>
-    </PageTransition>
+    </div>
   );
 }
 
