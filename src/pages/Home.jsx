@@ -3,24 +3,24 @@ import { useNavigate } from 'react-router-dom';
 import PageTransition from '../components/PageTransition';
 import Button from '../components/Button';
 import { FaPaperPlane, FaBriefcase, FaFileDownload, FaGithub, FaLinkedin, FaEnvelope, FaChevronDown } from 'react-icons/fa';
-import { SiPython, SiMysql, SiTensorflow, SiPandas, SiReact, SiJavascript } from 'react-icons/si';
+import { SiJava, SiPython, SiMysql, SiPowerbi, SiDjango, SiMicrosoftexcel } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import './Home.css';
 
 const stats = [
-  { value: '5+', label: 'Projects' },
+  { value: '3',   label: 'Projects' },
   { value: '15+', label: 'Skills' },
   { value: '3',   label: 'Certifications' },
 ];
 
 const techStack = [
-  { icon: SiPython,     label: 'Python' },
-  { icon: SiMysql,      label: 'SQL' },
-  { icon: SiTensorflow, label: 'TensorFlow' },
-  { icon: SiPandas,     label: 'Pandas' },
-  { icon: SiReact,      label: 'React' },
-  { icon: SiJavascript, label: 'JavaScript' },
+  { icon: SiJava,             label: 'Java' },
+  { icon: SiPython,           label: 'Python' },
+  { icon: SiMysql,            label: 'MySQL' },
+  { icon: SiPowerbi,          label: 'Power BI' },
+  { icon: SiDjango,           label: 'Django' },
+  { icon: SiMicrosoftexcel,   label: 'Excel' },
 ];
 
 function Home() {
